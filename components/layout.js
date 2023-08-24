@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = '[Your Name]'
+const name = 'Maurizio Aru'
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({ children, home }) {
@@ -37,6 +37,15 @@ export default function Layout({ children, home }) {
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <section className="topMenu">
+                <h2>Menu:</h2>
+                <ul>
+                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/about">About Us</Link></li>
+                    <li><Link href="/contacts">Contacts</Link></li>
+                    <li><Link href="/posts/first-post">First Post</Link></li>
+                </ul>
+            </section>
           </>
         ) : (
           <>
@@ -55,6 +64,15 @@ export default function Layout({ children, home }) {
                 {name}
               </Link>
             </h2>
+            <section className="topMenu">
+                <h2>Menu:</h2>
+                <ul>
+                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/about">About Us</Link></li>
+                    <li><Link href="/contacts">Contacts</Link></li>
+                    <li><Link href="/posts/first-post">First Post</Link></li>
+                </ul>
+            </section>
           </>
         )}
       </header>
